@@ -10,13 +10,13 @@ cd PythonPlayground
 Contributing
 
 - Feel free to submit pull requests with new scripts, exercises, or projects!
-- Open an issue to report any bugs or suggest new ideas.
+- - Open an issue to report any bugs or suggest new ideas.
   
-1.Fork the repository
-2.Create a new branch (git checkout -b feature/your-feature-name)
-3.Commit your changes (git commit -m 'Add some feature')
-4.Push to the branch (git push origin feature/your-feature-name)
-5.Create a new Pull Request
+  1.Fork the repository
+  2.Create a new branch (git checkout -b feature/your-feature-name)
+  3.Commit your changes (git commit -m 'Add some feature')
+  4.Push to the branch (git push origin feature/your-feature-name)
+  5.Create a new Pull Request
 
 Author
 
