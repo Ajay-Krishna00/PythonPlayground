@@ -38,7 +38,7 @@ API_KEY = os.getenv('NEWS_API_KEY')  # Read API key from environment variable
 
 def displayNews(response):
   news = json.loads(response.text)
-  if 'articles' in news:
+  if news['totalResults']!=0:
     print(f"\nTotal results found: {news['totalResults']}")
     print("\nThe news articles are: ")
     print("-"*50)
@@ -65,6 +65,11 @@ print("The News are displayed from: ",FromDate)
 
 inp=input("Enter \n 1 to Search for news articles that mention a specific topic or keyword\n 2 to Get the current top headlines for a country or category :\n ")
 
+headers = {
+    'User-Agent': 'NewsApp/1.0',
+    'Authorization': f'Bearer {API_KEY}'
+}
+
 if inp == '1':
   inp=input("\nEnter the topic you want to search for: ")
   url = ('https://newsapi.org/v2/everything?'
@@ -73,7 +78,7 @@ if inp == '1':
         'language=en&'
         f'apiKey={API_KEY}')
 
-  response = requests.get(url)
+  response = requests.get(url, headers=headers)
   displayNews(response)
 
 elif inp =='2':
@@ -82,5 +87,5 @@ elif inp =='2':
         f'country={inp}&'
         'language=en&'
         f'apiKey={API_KEY}')
-  response = requests.get(url)
+  response = requests.get(url, headers=headers)
   displayNews(response)
