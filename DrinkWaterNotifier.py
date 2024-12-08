@@ -21,9 +21,11 @@ if __name__ == "__main__":
         notification.notify(
             title = "Please Drink Water Now",
             message = "Drinking water is important for your health",
+            app_name="Health Notifier",
             app_icon = r".\Assets\icon.ico",
-            timeout = 9
+            ticker = "Drink Water Now",
+            timeout = 10
         )
-        time.sleep(10*60*60)
+        time.sleep(1*60*60)
         
 
