@@ -10,3 +10,5 @@ venv/
 *.aac
 *.m4a
 *.mkv
+.ipynb_checkpoints/
+PyWhatKit_DB.txt
